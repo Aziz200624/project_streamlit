@@ -3,18 +3,18 @@ from Pages import Home, Project1, Project2, Project3
 from streamlit_navigation_bar import st_navbar as navbar
 from PIL import Image
 
-image = Image.open("img/magic.png")
+image = Image.open("img/basketball.png")
 st.set_page_config(page_title="The Work", initial_sidebar_state="collapsed", page_icon=image)
 
 pages = ["Home", "Project1", "Project2", "Project3"]
 
 styles = {
     "nav": {
-        "background-color": "rgb(123, 209, 146)",
+        "background-color": "red",
         "display": "flex",
         "justify-content": "center",
         "align-items": "center",
-        "height": "30px",
+        "height": "50px",
     },
 
     "img": {
@@ -40,11 +40,11 @@ styles = {
     },
 
     "hover": {
-        "background-color": "rgba(0, 0, 0, 0.35)",
+        "background-color": "rgba(0, 0, 0, 0.25)",
     }
 }
 
-page = navbar(pages, logo_path="img/magic.svg", styles=styles)
+page = navbar(pages, logo_path="img/basketball.svg", styles=styles)
 
 if page == "Home":
     Home.Home().app()

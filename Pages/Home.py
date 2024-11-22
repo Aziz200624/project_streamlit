@@ -3,4 +3,4 @@ class Home:
     def __init__(self):
         pass
     def app(self):
-        st.write(st.__version__)
+        st.write("Hi!")
